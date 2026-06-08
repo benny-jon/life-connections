@@ -4,7 +4,7 @@ An interactive meditation on the people who make up a life.
 
 Watch a web of relationships form, grow, and slowly transform over 92 years — from the family you're born into, to the friends you make, to the children you raise, and finally to what remains.
 
-**[→ View it live](https://yourusername.github.io/life-connections)**
+**[→ View it live](https://benny-jon.github.io/life-connections/)**
 
 ---
 
