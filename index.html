@@ -136,7 +136,7 @@ canvas { display: block; }
   text-align: center; width: min(580px, 90vw);
 }
 #stage-title {
-  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 4px; text-transform: uppercase;
   color: rgba(255,200,100,0.58); margin-bottom: 8px; transition: opacity 0.4s;
 }
 #stage-message {
@@ -760,11 +760,11 @@ function drawTimeline(t) {
     ctx.fillStyle=isCur?'#FFD166':isPast?'rgba(255,200,100,0.52)':'rgba(255,255,255,0.17)';
     ctx.fill();
 
-    ctx.font='9px Georgia'; ctx.textAlign='center';
+    ctx.font='11px Georgia'; ctx.textAlign='center';
     ctx.fillStyle=isPast?'rgba(255,200,100,0.48)':'rgba(255,255,255,0.17)';
-    ctx.fillText(s.age, x, lineY+17);
+    ctx.fillText(s.age, x, lineY+19);
 
-    ctx.font='7.5px Georgia';
+    ctx.font='9.5px Georgia';
     ctx.fillStyle=isCur?'rgba(255,215,100,0.95)':isPast?'rgba(255,200,100,0.35)':'rgba(255,255,255,0.12)';
     ctx.fillText(STAGE_LABELS[i], x, above?lineY-14:lineY-26);
   }
