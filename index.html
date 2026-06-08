@@ -127,7 +127,7 @@ canvas { display: block; }
 }
 .li {
   display: flex; align-items: center; gap: 7px;
-  font-size: 9.5px; color: rgba(255,255,255,0.25); letter-spacing: 0.3px;
+  font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.3px;
 }
 .ld { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
@@ -760,11 +760,11 @@ function drawTimeline(t) {
     ctx.fillStyle=isCur?'#FFD166':isPast?'rgba(255,200,100,0.52)':'rgba(255,255,255,0.17)';
     ctx.fill();
 
-    ctx.font='11px Georgia'; ctx.textAlign='center';
+    ctx.font='12px Georgia'; ctx.textAlign='center';
     ctx.fillStyle=isPast?'rgba(255,200,100,0.48)':'rgba(255,255,255,0.17)';
     ctx.fillText(s.age, x, lineY+19);
 
-    ctx.font='9.5px Georgia';
+    ctx.font='12px Georgia';
     ctx.fillStyle=isCur?'rgba(255,215,100,0.95)':isPast?'rgba(255,200,100,0.35)':'rgba(255,255,255,0.12)';
     ctx.fillText(STAGE_LABELS[i], x, above?lineY-14:lineY-26);
   }
