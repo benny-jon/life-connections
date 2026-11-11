@@ -22,7 +22,7 @@ Some connections grow stronger. Some drift. Some disappear entirely.
 
 | Input | Action |
 |-------|--------|
-| `→` or `Space` | Advance to the next life stage |
+| `→` or `Space` or Clicks | Advance to the next life stage |
 | `←` | Rewind to the previous stage |
 | Tap | Advance (mobile) |
 | Swipe left | Advance (mobile) |

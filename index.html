@@ -180,7 +180,7 @@ canvas { display: block; }
     <p class="intro-eyebrow">An interactive meditation</p>
     <h1>A Life in Connections</h1>
     <p class="intro-desc">Watch a web of relationships form, grow, and slowly transform over a lifetime — from the family you're born into, to the friends you make, to the children you raise, to the quiet moment when you realize what's left.</p>
-    <p class="intro-keys" id="intro-keys">SPACE or tap to advance &nbsp;·&nbsp; ← → to navigate</p>
+    <p class="intro-keys" id="intro-keys">Click, SPACE or tap to advance &nbsp;·&nbsp; ← → to navigate</p>
     <button id="begin-btn">Begin</button>
   </div>
 </div>
@@ -252,7 +252,7 @@ window.addEventListener('resize', resize);
 const isMobile = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 document.getElementById('hint').textContent = isMobile
   ? 'Tap · swipe right to go back'
-  : '← → or SPACE to navigate';
+  : 'Click to advance · ← → or SPACE to navigate';
 if (isMobile) document.getElementById('intro-keys').textContent = 'Tap to advance · swipe right to go back';
 
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
@@ -704,7 +704,7 @@ function advance() {
       o.setAttribute('aria-hidden','false');
     }, 4200);
   } else {
-    hintEl.textContent=isMobile?'Tap · swipe right to go back':'← → or SPACE to navigate';
+    hintEl.textContent=isMobile?'Tap · swipe right to go back':'Click to advance · ← → or SPACE to navigate';
     hintEl.style.color='rgba(255,255,255,0.17)';
   }
 }
@@ -722,11 +722,11 @@ function rewind() {
     showText(STAGES[currentStage].title, STAGES[currentStage].message);
   } else {
     targetAge=0;
-    showText('A Life in Connections', isMobile?'Tap to advance · swipe right to go back':'Use ← → or SPACE to navigate through a lifetime.');
+    showText('A Life in Connections', isMobile?'Tap to advance · swipe right to go back':'Use Click to advance · ← → or SPACE to navigate through a lifetime.');
   }
   displayAge=targetAge; ageEl.textContent=Math.floor(displayAge);
   updateDots();
-  hintEl.textContent=isMobile?'Tap · swipe right to go back':'← → or SPACE to navigate';
+  hintEl.textContent=isMobile?'Tap · swipe right to go back':'Click to advance · ← → or SPACE to navigate';
   hintEl.style.color='rgba(255,255,255,0.17)';
 }
 
@@ -849,6 +849,9 @@ document.getElementById('revisit-btn').addEventListener('click', e=>{
 document.getElementById('outro').addEventListener('click', e=>{
   if (e.target===document.getElementById('outro')) hideOutro();
 });
+
+// Mouse clicks use the same stage progression as keyboard and touch input.
+canvas.addEventListener('click', advance);
 
 // ─── TOUCH ────────────────────────────────────────────────────────────────────
 let touchStartX=0, touchStartY=0;
